@@ -17,3 +17,9 @@ document.getElementById('form')?.addEventListener('submit', function(event) {
       alert(JSON.stringify(err));
     });
 });
+
+document.addEventListener('astro:page-load', ()=> {
+  for (const element of document.querySelectorAll('#fade-image')) {
+      element.classList.remove('scale-90')
+  }
+})
