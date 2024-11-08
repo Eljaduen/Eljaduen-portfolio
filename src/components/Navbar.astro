@@ -1,0 +1,29 @@
+---
+const { pathname } = Astro.url;
+import { socials, info } from "../data/data-navbar";
+---
+
+
+<nav class="w-full h-16 text-white flex items-center px-4 py3 top-0 z-50 md:justify-between xs:justify-center backdrop-blur-sm fixed border-b border-white/10" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+    <ul class="justify-items-center xl:basis-[10%] md:basis-[18%] md:grid xs:hidden"
+    style={{ gridTemplateColumns: `repeat(${socials.length}, minmax(0, 1fr))`}}>
+        {socials.map(social => ( 
+            <li>
+                <a href={social.url} target="_blank" class="text-2xl opacity-70 hover:opacity-100 duration-300 ease-in cursor-pointer">
+                    <i class={social.icon}></i>
+                </a>
+            </li>
+        ))}
+    </ul>
+
+    <ul class="grid justify-items-center gap-x-3 xl:basis-[20%] md:basis-[25%] sm:basis-[40%] xs:basis-[75%]"
+    style={{ gridTemplateColumns: `repeat(${info.length}, minmax(0, 1fr))`}}>
+        {pathname === '/' && info.map((i) => (
+            <li>
+                <a href={`#${i.text.toLowerCase()}`} class="opacity-70 hover:opacity-100 duration-300 text-[1.0625rem] font-semibold">{i.text}</a>
+            </li>
+        ))}
+
+    </ul>
+
+</nav>

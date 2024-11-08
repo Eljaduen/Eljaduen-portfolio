@@ -1,0 +1,47 @@
+.text-header {
+    animation: myAnimation .7s ease-in backwards;
+}
+  
+@keyframes myAnimation {
+    0% {
+        transform: scale(0.5);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.image-profile {
+    animation: myAnimationImage .7s ease-in-out backwards;
+}
+
+@keyframes myAnimationImage {
+    0% {
+        filter: blur(4px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}
+
+/* Projects Styles */
+
+.container {
+    transform: translateY(2.5rem);
+    transition: transform ease-in-out 500ms;
+}
+
+.parent-container:hover .container {
+    transform: translateY(0);
+}
+
+.parent-container:hover .container .paragraph {
+    opacity: 1;
+    transition: opacity ease 500ms;
+}
+
+html {
+    scroll-behavior: smooth;
+}

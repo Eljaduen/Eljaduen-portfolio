@@ -1,0 +1,36 @@
+---
+import Prueba from "./Prueba.astro";
+---
+
+<section class="flex justify-center items-center flex-col xl:flex-row  w-full gap-8 lg:max-w-[72rem] mx-auto px-8 lg:px-8  py-16 ">
+    <div>
+        <h2 class="text-[2.125rem] lg:text-[3.125rem] font-bold bg-clip-text text-center text-transparent bg-gradient-to-r from-orange-500 from-10% via-purple-700 via-70% to-purple-800 to-100%">Contact Me</h2>
+        <p class="opacity-70">"Fell free to reach out for collaborations, inquiries, or just a friendly coding chat anytime!"</p>
+        <form autocomplete="off" class="flex flex-col py-2 mt-1" id="form">
+            <label for="to_name" class="font-bold text-[1rem] opacity-90">
+                Name
+            </label>
+            <input type="text" id="to_name" name="to_name" 
+            class="bg-transparent border-white/50 border-2 placeholder:text-white/50
+            px-3 py-[0.3125rem] rounded-md mb-3 w-full max-w-[37.5rem]" placeholder="What's your name?">
+            <label for="email" class="font-bold text-[1rem] opacity-90">
+                Email
+            </label>
+            <input type="text" id="email" name="email"
+            class="bg-transparent border-white/50 border-2 placeholder:text-white/50
+            px-3 py-[0.3125rem] rounded-md mb-3 w-full max-w-[37.5rem]" placeholder="Type here...">
+            <label for="message" class="font-bold text-[1rem] opacity-90">
+                Message
+            </label>
+            <input type="text" id="message" name="message"
+            class="bg-transparent border-white/50 border-2 placeholder:text-white/50
+            px-3 py-[0.3125rem] rounded-md mb-3 w-full max-w-[37.5rem]" placeholder="Type here...">
+            <button id="button-form" class="border-2 border-gray-400 rounded-md bg-transparent w-fit px-8 py-2 my-4">Submit</button>
+        </form>
+    </div>
+
+    <!-- <img src="/coffe-pc.jpg" alt="Pc Form" class="object-cover w-[40%] h-[70%] rounded-md md:block hidden"> -->
+    <div class="object-cover w-[40%] rounded-md hidden md:block">
+        <Prueba />
+    </div>
+</section>

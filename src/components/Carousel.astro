@@ -1,0 +1,39 @@
+---
+import { skills } from "../data/data-technologies";
+---
+
+<div class="w-full max-w-[70rem] overflow-hidden gap-8 flex items-center h-20 border-y border-white/10 backdrop-blur-sm" style={{ maskImage: 'linear-gradient(90deg, rgba(7, 7, 9, 0), #070709 15.77%, #070709 86.73%, rgba(7, 7, 9, 0))', backgroundColor: 'rgba(101, 101, 101, 0.5)'}}>
+    <ul class="flex justify-around gap-8 animate-scroll-x shrink-0">
+        { skills.map(skill => (
+            <li class="flex gap-2 items-center ">
+                <i class={skill.icon + ' text-4xl'}></i>
+                <p class="text-[1.5rem] leading-none">{skill.text}</p>
+            </li>
+        ))
+        }
+    </ul>
+    <ul class="flex justify-around gap-8 animate-scroll-x shrink-0">
+        { skills.map(skill => (
+            <li class="flex gap-2 items-center">
+                <i class={skill.icon + ' text-4xl'}></i>
+                <p class="text-[1.5rem] leading-none">{skill.text}</p>
+            </li>
+        ))
+        }
+    </ul>
+</div>
+
+<style>
+    .animate-scroll-x {
+        animation: scroll-x 20s linear infinite;
+    }
+
+    @keyframes scroll-x {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-100% - 2rem));
+        }
+    }
+</style>
